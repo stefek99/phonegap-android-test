@@ -38,15 +38,30 @@
             }
         }); 
 
+        // WORKS
+        // $("#intent").on("click", function() {
+        //   window.plugins.webintent.startActivity({
+        //       action: window.plugins.webintent.ACTION_VIEW,
+        //       url: 'tel:123'},
+        //       function() {
+        //         alert("success callback");
+        //       },
+        //       function() {
+        //         alert('Failed to open URL via Android Intent');
+        //       }
+        //   );
+        // });        
+
+
         $("#intent").on("click", function() {
           window.plugins.webintent.startActivity({
-              action: window.plugins.webintent.ACTION_VIEW,
-              url: 'tel:123'},
+              action: "android.settings.LOCATION_SOURCE_SETTINGS"},
               function() {
                 alert("success callback");
               },
-              function() {
-                alert('Failed to open URL via Android Intent');
+              function(err) {
+                var err_string = JSON.stringify(err, null, 2);
+                alert(err_string);
               }
           );
         });
