@@ -21,5 +21,6 @@
     <preference name="permissions" value="none"/>
 
     <gap:plugin name="com.google.cordova.admob" source="plugins.cordova.io" />
+    <gap:plugin name="net.tunts.webintent" version="0.2.1" />
     
    </widget>
