@@ -40,11 +40,13 @@
 
         var address = "Kraków, ul. Lubicz 9";
 
-        $("intent").on("click", function() {
+        $("#intent").on("click", function() {
           window.plugins.webintent.startActivity({
               action: window.plugins.webintent.ACTION_VIEW,
               url: 'geo:0,0?q=' + address},
-              function() {},
+              function() {
+                alert("success callback");
+              },
               function() {
                 alert('Failed to open URL via Android Intent');
               }
