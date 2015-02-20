@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-    <widget xmlns   = "http://www.w3.org/ns/widgets"
+  <widget xmlns   = "http://www.w3.org/ns/widgets"
         xmlns:gap   = "http://phonegap.com/ns/1.0"
-        id          = "net.stefanow.admobtest"
+        id          = "net.stefanow.locationtest"
         versionCode = "10" 
         version     = "1.0.0" >
 
-    <!-- versionCode is optional and Android only -->
+    <name>Location test</name>
 
-    <name>AdMob test</name>
+    <description>Lorem Ipsum</description>
 
-    <description>
-        Lorem Ipsum.
-    </description>
+    <author href="https://michalstefanow.com" email="mstefanow@gmail.com"></author>
 
-    <author href="https://roadblock.io" email="info@roadblock.io">
-        
-    </author>
-
-    <!-- http://docs.build.phonegap.com/en_US/2.9.0/configuring_features.md.html -->
     <preference name="permissions" value="none"/>
+    <feature name="http://api.phonegap.com/1.0/geolocation"/>
 
-    <gap:plugin name="com.google.cordova.admob" source="plugins.cordova.io" />
-    <gap:plugin name="net.tunts.webintent" version="0.2.1" />
+    <gap:plugin name="org.apache.cordova.geolocation" version="0.3.10" />
     
-   </widget>
+  </widget>
